@@ -1,0 +1,17 @@
+# Private source material and generated deliverables
+/private/
+/inputs/
+/outputs/
+/exports/
+/tmp/
+/.local/
+
+# Credentials and local tooling
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

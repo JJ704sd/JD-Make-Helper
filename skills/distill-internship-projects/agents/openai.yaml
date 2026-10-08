@@ -1,0 +1,4 @@
+interface:
+  display_name: "实习项目提炼与简历制作"
+  short_description: "把实习项目代码与工作记录提炼为可信经历，支持开发、测试岗位改写和简历制作"
+  default_prompt: "请使用 $distill-internship-projects，把我的实习项目材料提炼成与目标岗位相关、能用证据支撑的简历经历。"
