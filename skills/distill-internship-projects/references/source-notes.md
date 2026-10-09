@@ -43,3 +43,24 @@ Skill 结构与本地链接检查不证明简历事实。场景试用只能验�
 - 两次试用均先交付候选经历、技术与贡献、来源账本和关键待确认项，没有要求补填完整表单。缺失公司、日期与个人职责未自动补齐；未读附件、截断输出和只有调用状态的工具结果在私有覆盖说明中列出。
 
 真实聊天信息稿保存在已忽略的 outputs/，虚构输入与试用证据保存在 .local/，均不随公开同步发布。这些检查验证给定聊天范围的整理行为，不证明源项目当前的生产状态、个人能力或所有导出格式均受支持。
+
+## 2026-10-09 ASu-skills 参考改造
+
+本次只读核对上游 main，参考版本为 4306ec6aa1722b16ee8ff9a75a414eb5e04541ff。读取 README、入口清单、以下流程与 MIT 许可后，按本项目用途改写：
+
+- [job-match](https://github.com/Hisn00w/ASu-skills/blob/4306ec6aa1722b16ee8ff9a75a414eb5e04541ff/skills/job-match/SKILL.md)：要求—证据矩阵、五种匹配状态、硬性门槛和可解释的投递建议。
+- [evidence-recap](https://github.com/Hisn00w/ASu-skills/blob/4306ec6aa1722b16ee8ff9a75a414eb5e04541ff/skills/evidence-recap/SKILL.md)：问题、个人动作、阶段、结果与责任边界的证据组织。
+- [great-resume](https://github.com/Hisn00w/ASu-skills/blob/4306ec6aa1722b16ee8ff9a75a414eb5e04541ff/skills/great-resume/SKILL.md)与 [claim-evidence-ledger](https://github.com/Hisn00w/ASu-skills/blob/4306ec6aa1722b16ee8ff9a75a414eb5e04541ff/skills/great-resume/references/claim-evidence-ledger.md)：同一原始事实跨任务交接，候选措辞不反向成为确认来源。
+
+保留 distill-internship-projects 单入口与可独立复制的资源目录，按复盘、JD 匹配、经历改写与文件制作按需读取参考。没有复制上游九入口插件结构，也没有引入其浏览器投递、进度管理或外部调用。聊天导入器与 HTML 模板保持原实现，旧账本字段无需迁移；新增匹配稿引用已有稳定事实 ID。
+
+新增岗位匹配稿与完全虚构的对照示例。上游版权声明继续保留于 [许可原文](asu-license.txt)。
+
+本轮实际验证：
+
+- skill-creator quick_validate 通过；17 份 Markdown 的 43 个本地引用无缺失，UI 名称与默认提示一致，主入口为 55 行。
+- 项目既有聊天导入器的 17 项 unittest 回归通过。没有新增运行依赖；这些回归检查导入行为，不证明简历或匹配结论真实。
+- 独立试用完成两个虚构场景，主 Agent 已回读：只做 JD 分析时保持条件式投递建议与本地测试范围；只复盘聊天时处理后续否认、局部修复、团队职责、计划功能与未读附件，没有生成简历或展开其他模式。
+- 根据试用与回读，补充“未使用”不自动否定“了解”的判断，并将虚构示例中的真实缺口改为明确否认基本认知的材料。
+
+本轮来源快照、结构结果、虚构输入与实际试用输出保存在已忽略的 .local/asu-refactor-20261009/。未用真实用户履历或在线招聘页面试用，本轮未重做 HTML/PDF 渲染；历史模板检查仍只属于其原记录范围。
