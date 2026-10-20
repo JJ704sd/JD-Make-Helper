@@ -1,0 +1,15 @@
+{
+  "max_file_bytes": 98304,
+  "max_files_per_project": 30,
+  "git_limit": 30,
+  "projects": [
+    {
+      "id": "example-project",
+      "name": "示例项目（替换为自己的目录）",
+      "root": "../example-project",
+      "git": true,
+      "documents": ["README.md", "CHANGELOG.md", "docs/*progress*.md", "docs/*验收*.md"],
+      "chats": []
+    }
+  ]
+}

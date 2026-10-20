@@ -68,9 +68,19 @@ Agent 会读取相关历史、归并同一项目、处理后续修正，区分�
 
 支持常见 role/content 消息列表、ChatGPT 当前会话分支和 Codex read_thread 导出；任意客户端的专用日志不保证兼容。附件未读取、历史不完整、输出截断或权限不足会明确列出。聊天日期不直接作为实习日期，助手生成的代码也不直接证明本人独立开发。
 
+## 统一项目进展素材库
+
+可以把多个本地项目的 Git 历史、进展/验收文字和聊天导出，收集到一个本地 SQLite 素材库，再由当前 Agent 压缩为带证据的关键节点。页面支持跨项目搜索、状态筛选、历史修正与原文展开；同时生成 resume-context.md 和事实账本，供后续简历润色复用。
+
+> 请使用 $distill-internship-projects，采集我指定项目的进展，归并重复修改，保留关键决策、实现、验证与修正，更新本地素材库，再基于其中与目标岗位相关的事实润色简历。
+
+先复制 [来源配置示例](skills/distill-internship-projects/assets/project-hub-config.example.json) 到 private/project-hub.sources.json，填写项目目录和要读取的文件；随后按 [采集、压缩与检索流程](skills/distill-internship-projects/references/project-hub.md)执行。采集不调用额外模型，语义压缩由当前 Agent 完成，不自动开启后台监控。
+
+统一库默认使用 private/project-hub.sqlite3，页面与简历素材输出到 outputs/project-hub/。来源变化保留历史并提示复核，Git 提交和方案文档不直接成为个人成果；原有聊天导入和简历文件流程继续可用。该功能借鉴 [Magpie](https://usemagpie.ai/zh/) 的统一入口思路，具体的进展采集和证据压缩由本项目实现。
+
 ## 维护检查
 
-本地导入器使用 Python 3.10+ 标准库，无新增运行依赖。执行相关回归：
+聊天导入器与项目素材库使用 Python 3.10+ 标准库，无新增运行依赖。执行相关回归：
 
     python -B -m unittest discover -s tests -v
 

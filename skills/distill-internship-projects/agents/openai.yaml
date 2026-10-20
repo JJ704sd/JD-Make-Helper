@@ -1,4 +1,4 @@
 interface:
   display_name: "实习项目提炼与简历制作"
-  short_description: "从聊天与项目提炼真实经历，支持证据复盘、JD 对照和简历制作，保留个人边界与验证依据"
+  short_description: "采集跨项目进展与聊天，沉淀可追溯节点，支持 JD 对照、经历润色与简历制作"
   default_prompt: "请使用 $distill-internship-projects，按我的请求整理项目证据、分析目标 JD 或提炼简历经历，先给有依据的结果，再列关键待确认项。"
